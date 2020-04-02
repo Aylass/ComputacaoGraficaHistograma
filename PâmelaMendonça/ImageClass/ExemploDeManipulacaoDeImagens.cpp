@@ -292,12 +292,12 @@ void display( void )
     glutSwapBuffers();
 
 }
-// PINHO
+
 // **********************************************************************
 //  Pinta Semente
 // **********************************************************************
 
-//Acc = 0;
+
 void Fill8(int x,int y) //8 vizinhos
 {
     if ((Image.ReadR(x,y) == OLD_COLOR.red)&&(Image.ReadG(x,y) == OLD_COLOR.green)&&(Image.ReadB(x,y) == (int)OLD_COLOR.blue)) //se o pixel é da mesma cor do antigo seed
@@ -340,13 +340,14 @@ void Preenche(int Seed_x,int Seed_y,unsigned char Novo_r,unsigned char Novo_g,un
     NEW_COLOR.blue = Novo_b;
 
     //printf("%d",NEW_COLOR.green); //ta printando o valor da cor verde
-//PINHO  -- no printf faltava um %d
+
     printf("Anivia: %d, %d",Seed_x, Seed_y);
     //chama o método recursivo para pintar
     //Fill8(Seed_x, Seed_y);
     Fill4(Seed_x, Seed_y);
     display();
 }
+
 // **********************************************************************
 //  void keyboard ( unsigned char key, int x, int y )
 // **********************************************************************
@@ -386,7 +387,7 @@ void keyboard ( unsigned char key, int x, int y )
         NewImage.CopyTo(&Image);
         glutPostRedisplay();    // obrigatório para redesenhar a tela
         break;
-// PINHO
+
         case 'p':
         Preenche(180,150,255,255,255);
         glutPostRedisplay();    // obrigatório para redesenhar a tela

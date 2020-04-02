@@ -315,7 +315,7 @@ void Fill8(int x,int y)
 
 void Preenche(int Seed_x,int Seed_y,unsigned char Novo_r,unsigned char Novo_g,unsigned char Novo_b)
 {
-    Image.DrawLine(0, 0, Seed_x, Seed_y, 255, 255, 0);
+    //Image.DrawLine(0, 0, Seed_x, Seed_y, 255, 255, 0);
     Image.ReadPixel(Seed_x,Seed_y,OLD_COLOR.red, OLD_COLOR.green, OLD_COLOR.blue); //pega a cor do pixel
 
     //atribui a cor nova
